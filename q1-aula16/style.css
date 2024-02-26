@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  display: flex;
+  font-family: 'Poppins', sans-serif;
+  width: 100vw;
+}
+#root {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+#container-select {
+  position: fixed;
+  background-color: green;
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+#title-select {
+  font-size: 1.5rem;
+  color: white;
+}
+
+/* +++++ informações do tempo +++ */
+main {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 20%;
+  justify-content: center;
+}
+.container_info_weather {
+  position: relative;
+  margin-top: 2rem;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+.container_info_weather:nth-child(1) {
+  margin-top: 4rem;
+}
+.container_info_weather:nth-child(2) {
+  margin-top: 4rem;
+}
+
+.container_info_weather > p {
+  font-size: 0.7rem;
+}
+.c-all {
+  position: relative;
+  display: flex;
+  padding: 2rem 1rem;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  width: 100%;
+  border-radius: 0.5rem;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.c-all:hover {
+  transition: 0.3s;
+  scale: 1.02;
+  background-color: rgb(247, 247, 247);
+}
+
+.c-all > h1 {
+  position: absolute;
+  font-size: 0.7rem;
+  text-align: center;
+  width: 5rem;
+  right: 2rem;
+  top: 1rem;
+}
+.c-all > h2 {
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.c-info {
+  width: 100%;
+}
+.c-info > p {
+  font-size: 0.8rem;
+  width: 90%;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+.c-max_min {
+  display: flex;
+  gap: 2rem;
+}
+.c-max_min > p {
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+img {
+  width: 8rem;
+}
+
+select {
+  padding: 0.7rem;
+  width: 15rem;
+  border: none;
+  background-color: #ffffff;
+  color: #393939;
+  border-radius: 0.3rem;
+  outline: none;
+}
+
+.wait-cursor {
+  cursor: wait !important;
+}
+
+.default-cursor {
+  cursor: default !important;
+}
+
+/* Error */
+#background-modal-error {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.57);
+}
+dialog {
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  position: absolute;
+  left: 34%;
+  top: 25%;
+  width: 30rem;
+  height: 15rem;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 0.3rem;
+}
+
+dialog > h2 {
+  font-size: 2rem;
+}
+dialog > p {
+  font-size: 0.8rem;
+}
+dialog > button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 1rem;
+  right: 1rem;
+  position: absolute;
+  font-size: 1rem;
+  font-weight: 600;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  border-radius: 50%;
+  background-color: rgb(251, 51, 51);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+dialog > button:hover {
+  transition: 0.3s;
+  background-color: rgb(226, 25, 25);
+}
